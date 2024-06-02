@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: #3B87B2;
+            color: white;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 70%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 30%;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden; /* Prevent content from overflowing */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow */
+            border-radius: 5px; /* Add rounded corners */
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px 5px 0 0; /* Add rounded corners to top */
+        }
+
+        .card h2, .card h5, .card p {
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .card h2 {
+            padding-top: 20px;
+        }
+
+        .card.popular-post {
+            margin-bottom: 20px; /* Add margin below the card */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+            .card.popular-post {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>BIBIMLOG</h2>
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <img src="image/투두리스트만들기.png" alt="투두리스트만들기">
+            <h2>두번째 개발 일지</h2>
+            <h5>투두리스트를 만들다, 2024년 6월 2일 일요일</h5>
+            <p>꽤 오래전에 여기 만든거 같은데 어제만들었네 ㅋㅋ<br/>
+            암튼 오늘은 우연히 발견한 사이트에서 투두리스트 만들기가 있어서 따라해봤다.<br/>
+            나름 괜찮은 듯 한테 아직까지 자바스크립트도 완벽정복은 못한거 같고 많이 공부해야한다.</p>
+        </div>
+
+        <div class="card">
+            <img src="image/1일차.jpg" alt="블로그를 만들다">
+            <h2>첫 개발자 일지</h2>
+            <h5>블로그를 만들다, 2024년 6월 1일 토요일</h5>
+            <p>지킬이라는 툴을 활용하여 손쉽게 홈페이지를 만들어 보려 하였으나 몇몇 오류로 인하여<br/>
+            포기하고 차라리 직접 작성하자하여 비주얼스튜디오에 구글에서 주워온 코드를 입혀보았습니다. 이 기본적인
+            베이스를 기반으로하여 더 멋지게 꾸며보도록 하겠습니다. 공부일지이자 발전하는 저의 블로그 기대해주시길 바랍니다.<br/></p>
+        </div>
+
+        <div class="card">
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <p>Some text..</p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card popular-post">
+            <h3>오늘의 할일을 적어보세요</h3>
+            <a href="todolist.html">go to 'todolist'</a>
+        </div>
+        <div class="card">
+            <a href="/followme.html">
+                <h3>Follow Me</h3>
+                <p>Some text..</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+</body>
+</html>
